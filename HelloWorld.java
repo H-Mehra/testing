@@ -6,7 +6,7 @@ public class HelloWorld{
 		System.out.println("Hello World to meera");
 		System.out.println("Hello World to Gurpinder");
 		System.out.println("Hello World to chainika");
-		System.out.println("Hello World to Rohan");
+		System.out.println("Hello World to Rohan P");
 		helloFromKanan();
 
 		sayHelloToChainika();
