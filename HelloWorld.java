@@ -33,4 +33,6 @@ public class HelloWorld{
 		System.out.println("Its intersting");
 			
 	}
+}public static void helloPriya() {
+	System.out.println("Hello Priya");
 }
