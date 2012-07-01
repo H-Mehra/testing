@@ -4,6 +4,7 @@ public class HelloWorld{
 
 		System.out.println("Hello World to chainika");
 		helloFromKanan();
+		sayHelloToChainika();
 	
 	}
 	 public void sayHelloToChainika(){
