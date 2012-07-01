@@ -12,4 +12,8 @@ public class HelloWorld{
 		System.out.println("Hello From "+name);
 		return name;
 	}
+
+	public static void helloKomgrich() {
+		System.out.println("Hello Komgrich");
+	}
 }
