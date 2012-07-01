@@ -3,12 +3,15 @@ public class HelloWorld{
 	public static void main(String[] args) {
 
 		System.out.println("Hello World to chainika");
+		helloFromKanan();
 	
 	}
 	 public void sayHelloToChainika(){
 	  		System.out.println("Hello Chainika!!!!");
 	 	}
-
+	 public static String helloFromKanan(){
+		 return "Hello From Kanan";
+	 }
 
 	public String helloMeera(){
 		String name = "Meera";
