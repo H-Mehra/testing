@@ -2,11 +2,15 @@ public class HelloWorld{
 	
 	public static void main(String[] args) {
 
+
 		System.out.println("Hello World to meera");
+		System.out.println("Hello World to Inder");
 		System.out.println("Hello World to chainika");
 		helloFromKanan();
+
 		sayHelloToChainika();
 	
+
 	}
 	 public void sayHelloToChainika(){
 	  		System.out.println("Hello Chainika!!!!");
