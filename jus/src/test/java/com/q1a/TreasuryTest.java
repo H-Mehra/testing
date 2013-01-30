@@ -32,8 +32,14 @@ public class TreasuryTest {
 
 	@Test
 	public void testRemoveGold() {
-		fail("Not yet implemented");
+		richMan.removeGold(20);
+		poorMan.removeGold(20);
+		assertEquals(richMan.getGold(),RICHMAN_NOOFGOLD-20);
+		assertEquals(poorMan.getGold(),POORMAN_NOOFGOLD-20);
 	}
-
+	@Test(expected=NegativeGoldInventoryException.class)
+	public void testNegativeTreasuryNotAllowed() throws NegativeGoldInventoryException{
+		poorMan.removeGold(10000);
+	}
 
 }
