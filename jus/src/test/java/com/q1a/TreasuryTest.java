@@ -2,31 +2,30 @@ package com.q1a;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TreasuryTest {
+	private Treasury richMan;
+	private Treasury poorMan;
 
-	private Treasury empty;
-	private Treasury full;
-	
 	@Before
-	public void init()
-	{
-		empty = new Treasury(0);
-		full = new Treasury(1000);
+	public void initialize(){
+		richMan = new Treasury(1000);
+		poorMan = new Treasury(0);
+
+	}
+	@After
+	public void tearDown(){
+		richMan = null;
+		poorMan = null;
 	}
 	
 	@Test
 	public void testGetGold() {
-		assertEquals(full.getGold(),1000);
-		assertEquals(empty.getGold(),0);
-	}
-
-	
-	@Test
-	public void testAddGold() {
-		fail("Not yet implemented");
+		assertEquals(richMan.getGold(),1000);
+		assertEquals(poorMan.getGold(),0);
 	}
 
 	@Test
