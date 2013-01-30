@@ -1,6 +1,8 @@
 package com.q1a;
 
-public class Person {
+public class Person implements Cloneable {
+
+	
 
 	private String firstName;
 	private String lastName;
@@ -56,6 +58,11 @@ public class Person {
 		} else if (!lastName.equals(other.lastName))
 			return false;
 		return true;
+	}
+	
+	@Override
+	public Person clone() throws CloneNotSupportedException {
+		 throw new CloneNotSupportedException("Dont try to clone me ever!!!");
 	}
 
 }
