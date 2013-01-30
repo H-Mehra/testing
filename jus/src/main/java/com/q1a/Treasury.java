@@ -3,11 +3,11 @@ package com.q1a;
 public class Treasury {
 
 	private long noOfGoldBricks;
-	
-	public Treasury(long noOfGoldBricks)
-	{
-		this.noOfGoldBricks=noOfGoldBricks;
+
+	public Treasury(long noOfGoldBricks) {
+		this.noOfGoldBricks = noOfGoldBricks;
 	}
+
 	public long addGold(long noOfBricks) {
 		this.noOfGoldBricks += noOfBricks;
 		return this.noOfGoldBricks;
@@ -15,6 +15,13 @@ public class Treasury {
 
 	public long removeGold(long noOfBricks) {
 		this.noOfGoldBricks -= noOfBricks;
+		try {
+			if (this.noOfGoldBricks < noOfBricks) {
+				throw new NegativeGoldInventoryException();
+			}
+		} catch (NegativeGoldInventoryException e) {
+			this.noOfGoldBricks += noOfBricks;
+		}
 		return this.noOfGoldBricks;
 	}
 
