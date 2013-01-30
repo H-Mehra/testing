@@ -9,11 +9,13 @@ import org.junit.Test;
 public class TreasuryTest {
 	private Treasury richMan;
 	private Treasury poorMan;
+	private static final long RICHMAN_NOOFGOLD = 1000;
+	private static final long POORMAN_NOOFGOLD = 0;
 
 	@Before
 	public void initialize(){
-		richMan = new Treasury(1000);
-		poorMan = new Treasury(0);
+		richMan = new Treasury(RICHMAN_NOOFGOLD);
+		poorMan = new Treasury(POORMAN_NOOFGOLD);
 
 	}
 	@After
@@ -24,8 +26,8 @@ public class TreasuryTest {
 	
 	@Test
 	public void testGetGold() {
-		assertEquals(richMan.getGold(),1000);
-		assertEquals(poorMan.getGold(),0);
+		assertEquals(richMan.getGold(),RICHMAN_NOOFGOLD);
+		assertEquals(poorMan.getGold(),POORMAN_NOOFGOLD);
 	}
 
 	@Test
