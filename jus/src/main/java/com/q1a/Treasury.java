@@ -18,7 +18,7 @@ public class Treasury {
 		return this.noOfGoldBricks;
 	}
 
-	public long getGold(long noOfBricks) {
+	public long getGold() {
 		return this.noOfGoldBricks;
 	}
 
