@@ -36,5 +36,18 @@ public abstract class HomeBase {
 		assertEquals("Its not s welcome Text","Welcome to Q1A – technical skills testing system for IT and software engineering professionals",text);
 
 	}
+	@Test
+	public void testHowItsWork() {
+		WebElement how=driver.findElement(By.id("imgvideo"));
+		String tagName = how.getTagName();
+		assertEquals("This element is not an image","img",tagName);
+		//String border = how.getAttribute("border");
+		//assertEquals("Border should be invisible","0",border);
+		String alt = how.getAttribute("alt");
+		assertEquals("Alt should be How it works?","How it works ?",alt);
+		String title = how.getAttribute("title");
+		assertEquals("Title should be How it works?","How it works ?",title);
+		how.click();
+	}
 
 }
