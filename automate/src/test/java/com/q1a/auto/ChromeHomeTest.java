@@ -1,5 +1,7 @@
 package com.q1a.auto;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,11 +11,10 @@ public class ChromeHomeTest extends HomeBase {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		
-		String os = System.getProperty("os.name");
-		if (os.split("Mac").length > 0)
-			System.setProperty("webdriver.chrome.driver","/Users/rishi/chromedriver");
-		driver = new ChromeDriver();
-		driver.get("http://www.a1a.com/");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shruthi\\InfoObject\\chrome\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("http://www.q1a.com/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 
