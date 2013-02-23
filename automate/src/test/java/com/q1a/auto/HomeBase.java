@@ -24,6 +24,8 @@ public abstract class HomeBase {
 		assertEquals("Border should be invisible as per specs","0",border);
 		String title =logo.getAttribute("title");		
 		assertEquals("The title is not as expected","Technical Assessment Platform",title);
+		String src = logo.getAttribute("src"); 
+		assertEquals("The q1a Logo Image source is wrong.","http://www.q1a.com/q1a/Content/Images/logo.png",src);
 		
 		
 		
