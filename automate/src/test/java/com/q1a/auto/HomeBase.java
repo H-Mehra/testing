@@ -19,7 +19,7 @@ public abstract class HomeBase {
 	@Test public void testLogo() {
 		WebElement logo = driver.findElement(By.id("img_logo"));
 		String tagName = logo.getTagName();
-		assertEquals("This Element is not an image","img",tagName);
+		assertEquals("This Element is not an image","img".toUpperCase(),tagName.toUpperCase());
 		String border = logo.getAttribute("border");
 		assertEquals("Border should be invisible as per specs","0",border);
 		
