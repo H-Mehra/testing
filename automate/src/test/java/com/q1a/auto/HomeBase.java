@@ -22,6 +22,8 @@ public abstract class HomeBase {
 		assertEquals("This Element is not an image","img".toUpperCase(),tagName.toUpperCase());
 		String border = logo.getAttribute("border");
 		assertEquals("Border should be invisible as per specs","0",border);
+		String title =logo.getAttribute("title");		
+		assertEquals("The title is Technical Assessment Platform","Technical Assessment Platform",title);
 		
 		
 		
