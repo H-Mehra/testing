@@ -33,7 +33,7 @@ public abstract class HomeBase {
 	public void testWelcome(){
 		WebElement welcome=driver.findElement(By.xpath("html/body/div[2]/div[3]/div[1]/div[1]"));
 		String text=welcome.getText();
-		assertEquals("Its not s welcome Text","Welcome to Q1A – technical skills testing system for IT and software engineering professionals",text);
+		assertEquals("It's not a welcome Text","Welcome to Q1A – technical skills testing system for IT and software engineering professionals",text);
 
 	}
 	@Test
