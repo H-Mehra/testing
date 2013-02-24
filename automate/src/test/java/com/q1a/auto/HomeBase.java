@@ -58,5 +58,24 @@ public abstract class HomeBase {
 		//System.out.println(footers.get(0));
 		
 	}
+	@Test
+	public void testScheduleDemoClosed() {
+		WebElement demo=driver.findElement(By.className("requestwidthright"));
+		String style= demo.getAttribute("style");
+		boolean contain = true;
+		int left=style.indexOf("left: -470px;");
+		if (left==-1) contain = false;
+		System.out.println(style);
+		assertEquals("Style should be left: -470px",true,contain);
+		contain = true;
+		int width=style.indexOf("width: 460px;");
+		if (width==-1) contain = false;
+		System.out.println(style);
+		assertEquals("Style should be width: 460px",true,contain);
+		int height=style.indexOf("height: 422px;");
+		if (height==-1) contain = false;
+		System.out.println(style);
+		assertEquals("Style should be height: 422px",true,contain);
+	}
 	
 }
