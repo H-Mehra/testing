@@ -2,6 +2,8 @@ package com.q1a.auto;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -50,4 +52,11 @@ public abstract class HomeBase {
 		how.click();
 	}
 
+	@Test
+	public void testFooter(){
+		List<WebElement> footers =driver.findElements(By.className("footer").id("id"));
+		//System.out.println(footers.get(0));
+		
+	}
+	
 }
