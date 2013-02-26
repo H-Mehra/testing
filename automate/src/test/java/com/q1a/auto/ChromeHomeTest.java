@@ -12,9 +12,11 @@ public class ChromeHomeTest extends HomeBase{
 	public static void setUp() throws Exception {
 
 		System.out.println(OS);
-
+        //Modify path where  chromedriver reside
 		if (isWindows()) {
 			System.out.println("This is Windows");
+			System.setProperty("webdriver.chrome.driver",
+					"C:/Chromedriver/chromedriver");
 		} else if (isMac()) {
 			System.out.println("This is Mac");
 			System.setProperty("webdriver.chrome.driver",
