@@ -15,7 +15,6 @@ import com.q1a.auto.com.q1a.auto.page.Page;
 
 public abstract class HomeTestBase {
 
-	protected static WebDriver driver;
 	protected static HomePage page;
 
 	@Test
