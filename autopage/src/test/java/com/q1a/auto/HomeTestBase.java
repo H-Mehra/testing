@@ -7,19 +7,18 @@ import java.util.NoSuchElementException;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.q1a.auto.com.q1a.auto.page.HomePage;
-import com.q1a.auto.com.q1a.auto.page.Page;
 
+ 
 public abstract class HomeTestBase {
 
 	protected static HomePage page;
 
 	@Test
 	public void testTitle() {
-		String title = driver.getTitle();
+		String title = page.getTitle();
 		assertEquals("Title is not as expected",
 				"Technical Assessment Platform", title);
 	}

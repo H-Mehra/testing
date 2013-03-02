@@ -9,6 +9,7 @@ import com.q1a.auto.com.q1a.auto.page.HomePage;
  
 public class FirefoxHomeTest extends HomeTestBase {
 
+	private static WebDriver driver;
 	@BeforeClass
 	public static void setUp() {
 		WebDriver driver = new FirefoxDriver();

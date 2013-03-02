@@ -19,4 +19,9 @@ public class HomePage extends Page {
 	   
    }
 
+
+public String getTitle() {
+	return driver.getTitle();
+}
+
 }
