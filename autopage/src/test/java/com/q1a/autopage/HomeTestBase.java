@@ -107,7 +107,7 @@ public abstract class HomeTestBase {
 		element.findElement(By.id("hylnk_feedback")).click();
 
 		try {
-			element.
+			
 			element.findElement(By.id("FullName"));
 			// Success!
 			System.out.printf("\n Feed back Page Link is working.");
