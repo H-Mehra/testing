@@ -2,15 +2,20 @@ package com.q1a;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeHomeTest extends HomeTestBase{
 
-	private static String OS = System.getProperty("os.name").toLowerCase();
+    private static WebDriver driver;
+    private static String OS = System.getProperty("os.name").toLowerCase();
 
-	@BeforeClass
-	public static void setUp() throws Exception {
-
+    @BeforeClass
+	public static void setUp() {
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.q1a.com/");
+		page = new HomePage(driver);
+		
 		System.out.println(OS);
         //Modify path where  chromedriver reside
 		if (isWindows()) {
@@ -32,15 +37,17 @@ public class ChromeHomeTest extends HomeTestBase{
 
 		driver = new ChromeDriver();
 		driver.get("http://www.q1a.com/");
-
+		
 	}
 
 	@AfterClass
-	public static void tearDown() throws Exception {
+	public static void tearDown() {
 		driver.quit();
 		driver = null;
-	}
 
+	}
+	
+	
 	public static boolean isWindows() {
 		return (OS.indexOf("win") >= 0);
 
@@ -58,5 +65,7 @@ public class ChromeHomeTest extends HomeTestBase{
 	public static boolean isSolaris() {
 		return (OS.indexOf("sunos") >= 0);
 	}
+
+	
 
 }
