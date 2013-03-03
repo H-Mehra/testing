@@ -11,7 +11,7 @@ public class SafariHomeTest extends HomeTestBase {
 	@BeforeClass
 	public static void setUp() {
 		WebDriver driver = new SafariDriver();
-		driver.get("http://www.q1a.com/");
+		driver.get("http://173.200.182.212:9090/test.q1a/");
 		page = new HomePage(driver);
 	}
 
