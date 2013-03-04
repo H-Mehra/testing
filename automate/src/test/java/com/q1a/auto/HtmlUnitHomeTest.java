@@ -13,7 +13,7 @@ public class HtmlUnitHomeTest extends HomeBase{
 	public static void setUp() throws Exception {
 		driver = new HtmlUnitDriver();
 		driver.get("http://" + BASE_URL);
-		System.out.println("Current URL = " + BASE_URL);  
+		System.out.println("Current URL = " + BASE_URL + ". To Modify change BASE_URL in HomeBase.java");  
 	}
 
 	@AfterClass

@@ -10,7 +10,7 @@ public class SafariHomeTest extends HomeBase {
 	public static void setUp() {
 		driver = new SafariDriver();
 		driver.get("http://" + BASE_URL);
-		System.out.println("Current URL = " + BASE_URL);  
+		System.out.println("Current URL = " + BASE_URL + ". To Modify change BASE_URL in HomeBase.java");  
 	}
 
 	@AfterClass

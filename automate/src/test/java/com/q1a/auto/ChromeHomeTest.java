@@ -10,7 +10,7 @@ public class ChromeHomeTest extends HomeBase{
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		System.out.println("Current URL = " + BASE_URL);  
+		System.out.println("Current URL = " + BASE_URL + ". To Modify change BASE_URL in HomeBase.java");  
 		
 		System.out.println(OS);
         //Modify path where  chromedriver reside

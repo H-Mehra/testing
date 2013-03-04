@@ -14,7 +14,7 @@ import org.openqa.selenium.WebElement;
 public abstract class HomeBase {
 
 	protected static WebDriver driver;
-    protected static final String BASE_URL = "173.200.182.212:9090/test.q1a/";
+    protected static final String BASE_URL = "173.200.182.212:9090/test/q1a/";
     
 	@Test
 	public void testTitle() {
