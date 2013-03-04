@@ -14,7 +14,8 @@ import org.openqa.selenium.WebElement;
 public abstract class HomeBase {
 
 	protected static WebDriver driver;
-
+    protected static final String BASE_URL = "173.200.182.212:9090/test.q1a/";
+    
 	@Test
 	public void testTitle() {
 		String title = driver.getTitle();
@@ -35,8 +36,8 @@ public abstract class HomeBase {
 				"Technical Assessment Platform", title);
 		String src = logo.getAttribute("src");
 		assertEquals("The q1a Logo Image source is wrong.",
-				"http://www.q1a.com/q1a/Content/Images/logo.png", src);
-
+				     "http://" + BASE_URL +"/Content/Images/logo.png", src);
+		
 	}
 
 	@Test
@@ -111,8 +112,8 @@ public abstract class HomeBase {
 		driver.findElement(By.id("hyplnk_cancel")).click();
 		assertEquals(
 				"Cancel function from Feed Back Footer Page Link is not return the home page url.",
-				"http://www.q1a.com", driver.getCurrentUrl());
-
+				BASE_URL, driver.getCurrentUrl());
+		
 	}
 
 	@Test
@@ -129,8 +130,8 @@ public abstract class HomeBase {
 		driver.findElement(By.id("hyplnk_cancel")).click();
 		assertEquals(
 				"Cancel function from Report A Bug Page Link is not return the home page url.",
-				"http://www.q1a.com", driver.getCurrentUrl());
-
+				BASE_URL, driver.getCurrentUrl());
+		
 	}
 
 	@Test
@@ -148,8 +149,8 @@ public abstract class HomeBase {
 
 		assertEquals(
 				"Cancel function from Schedule Demo Footer Page Link is not return the home page url.",
-				"http://www.q1a.com/q1a", driver.getCurrentUrl());
-
+				BASE_URL, driver.getCurrentUrl());
+		
 	}
 
 	@Test
@@ -171,7 +172,8 @@ public abstract class HomeBase {
 
 		try {
 			driver.findElement(By
-					.id("http://www.q1a.com/q1a/Home/PrivacyPolicy"));
+					.id("http://" + BASE_URL +"/Home/PrivacyPolicy"));
+			
 			// Success!
 			System.out.printf("\n Schedule Demo Page Link is existed.");
 		} catch (NoSuchElementException ignored) {
@@ -188,7 +190,7 @@ public abstract class HomeBase {
 
 		driver.findElement(By.linkText("Home")).click();
 		assertEquals("Home button is not return the home page url.",
-				"http://www.q1a.com", driver.getCurrentUrl());
+				BASE_URL , driver.getCurrentUrl());		
 
 	}
 
@@ -197,8 +199,8 @@ public abstract class HomeBase {
 		driver.findElement(By.id("hylnk_faq")).click();
 
 		try {
-			driver.findElement(By.linkText("http://www.q1a.com/q1a/Home/FAQ"));
-
+			driver.findElement(By.linkText("http://" + BASE_URL + "/Home/FAQ"));
+			
 			// Success!
 			System.out.printf("\n FAQs Page Link is present.");
 		} catch (NoSuchElementException ignored) {
@@ -216,8 +218,8 @@ public abstract class HomeBase {
 
 		driver.findElement(By.linkText("Home")).click();
 		assertEquals("Home button is not return the home page url.",
-				"http://www.q1a.com", driver.getCurrentUrl());
-
+				"http://" + BASE_URL, driver.getCurrentUrl());
+		
 	}
 
 	@Test
@@ -225,7 +227,7 @@ public abstract class HomeBase {
 		driver.findElement(By.id("hylnk_about")).click();
 
 		try {
-			driver.findElement(By.id("http://www.q1a.com/q1a/Home/AboutUs"));
+			driver.findElement(By.id("http://" + BASE_URL +"/Home/AboutUs"));
 			// Success!
 			System.out.printf("\n About Q1A Page Link is existed.");
 		} catch (NoSuchElementException ignored) {
@@ -244,8 +246,8 @@ public abstract class HomeBase {
 
 		driver.findElement(By.linkText("Home")).click();
 		assertEquals("Home button is not return the home page url.",
-				"http://www.q1a.com", driver.getCurrentUrl());
-
+				"http://" + BASE_URL, driver.getCurrentUrl());
+		
 	}
 
 }

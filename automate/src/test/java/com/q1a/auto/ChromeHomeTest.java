@@ -10,7 +10,8 @@ public class ChromeHomeTest extends HomeBase{
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-
+		System.out.println("Current URL = " + BASE_URL);  
+		
 		System.out.println(OS);
         //Modify path where  chromedriver reside
 		if (isWindows()) {
@@ -31,7 +32,7 @@ public class ChromeHomeTest extends HomeBase{
 		}
 
 		driver = new ChromeDriver();
-		driver.get("http://173.200.182.212:9090/test.q1a/");
+		driver.get("http://" + BASE_URL);
 
 	}
 

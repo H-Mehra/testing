@@ -9,7 +9,8 @@ public class SafariHomeTest extends HomeBase {
 	@BeforeClass
 	public static void setUp() {
 		driver = new SafariDriver();
-		driver.get("http://173.200.182.212:9090/test.q1a/");
+		driver.get("http://" + BASE_URL);
+		System.out.println("Current URL = " + BASE_URL);  
 	}
 
 	@AfterClass
