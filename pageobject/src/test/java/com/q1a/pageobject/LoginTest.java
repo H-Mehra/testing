@@ -6,14 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class LoginTest {
 	@Test 
-	public UserHomePage testLogin(){
+	public void testLogin(){
 		WebDriver driver=new FirefoxDriver();
 		LoginPage loginPage = new LoginPage(driver);
-		UserHomePage userHomePage=new UserHomePage(driver);
-		userHomePage=loginPage.testLogin();
-		return userHomePage;
-		
-				
+		//UserHomePage userHomePage=new UserHomePage(driver);
+		UserHomePage userHomePage=loginPage.testLogin();
+			
 				
 	}
 
