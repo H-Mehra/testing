@@ -12,6 +12,8 @@ public class UserHomePageTest {
 		WebDriver driver=new FirefoxDriver();
 		UserHomePage userHomePage=new UserHomePage(driver);
 		userHomePage.linksOnUserHomePage();
+		userHomePage.q1aTestTable();
+		driver.quit();
 	}
 	
 

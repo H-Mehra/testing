@@ -26,11 +26,31 @@ public class UserHomePage extends Page {
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < allLinks.size(); i++) {
 			System.out.println(allLinks.get(i).getText());
-
 		}
-
-		driver.quit();
 
 	}
 
+	public void q1aTestTable(){
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		String startIndex="//*[@id='MainForm']/div[2]/table/tbody/tr[";
+		String midIndex="]/td[";
+		String lastIndex="]";
+		System.out.println("****************************");
+		
+		for(int row=1;row<=8;row++){
+			for(int col=1;col<=4;col++){
+				WebElement text=driver.findElement(By.xpath(startIndex+row+midIndex+col+lastIndex));
+				System.out.print(text.getText()+"    ");
+			}
+			System.out.println();
+		}
+		
+					
+		}
+		
+		
+	
+	
+	
 }
