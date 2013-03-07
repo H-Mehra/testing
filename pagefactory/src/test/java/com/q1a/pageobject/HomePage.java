@@ -1,11 +1,13 @@
 package com.q1a.pageobject;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
+import static org.junit.Assert.*;
 
 public class HomePage extends LoadableComponent<HomePage> {
 
@@ -21,7 +23,7 @@ public class HomePage extends LoadableComponent<HomePage> {
 
 	@Override
 	protected void isLoaded() {
-      assertTrue(driver.getTitle(),"Technical Assessment Platform");
+      assertEquals(driver.getTitle(),"Technical Assessment Platform");
 	}
 
 	@Override
