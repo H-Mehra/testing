@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -14,33 +15,43 @@ import org.openqa.selenium.support.ui.Select;
 public class SignUpPageFactory extends Page {
 
 	private WebDriver driver;
+	@CacheLookup
 	@FindBy(how = How.ID, using = "FirstName")
 	private WebElement firstName;
-
+	
+	@CacheLookup
 	@FindBy(how = How.ID, using = "LastName")
 	private WebElement lastName;
-
+	
+	@CacheLookup
 	@FindBy(how = How.ID, using = "EmailAddress")
 	private WebElement emailAddress;
-
+	
+	@CacheLookup
 	@FindBy(how = How.ID, using = "Password")
 	private WebElement password;
-
+	
+	@CacheLookup
 	@FindBy(how = How.ID, using = "ConfirmPassword")
 	private WebElement confirmPassword;
-
+	
+	@CacheLookup
 	@FindBy(how = How.ID, using = "ddlcountry1")
 	private WebElement ddlcountry1;
 
+	@CacheLookup
 	@FindBy(how = How.ID, using = "recaptcha_response_field")
 	private WebElement recaptcha_response_field;
-
+    
+	@CacheLookup
 	@FindBy(how = How.ID, using = "hyplnk_cancel")
 	private WebElement hyplnkCancel;
-
+    
+	@CacheLookup
 	@FindBy(how = How.ID, using = "reset_button")
 	private WebElement reset;
-
+    
+	@CacheLookup
 	@FindBy(how = How.ID, using = "signup_button")
 	private WebElement signup;
 
