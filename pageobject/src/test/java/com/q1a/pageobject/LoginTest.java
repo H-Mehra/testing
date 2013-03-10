@@ -11,7 +11,7 @@ public class LoginTest {
 		LoginPage loginPage = new LoginPage(driver);
 		//UserHomePage userHomePage=new UserHomePage(driver);
 		UserHomePage userHomePage=loginPage.testLogin();
-			
+			driver.quit();
 				
 	}
 

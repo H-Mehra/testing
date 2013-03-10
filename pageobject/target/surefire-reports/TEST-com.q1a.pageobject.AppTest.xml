@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.044" errors="0" skipped="0" tests="1" name="com.q1a.pageobject.AppTest">
+<testsuite failures="0" time="0.072" errors="0" skipped="0" tests="1" name="com.q1a.pageobject.AppTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\jdk1.6\jre\bin"/>
@@ -19,7 +19,7 @@
     <property name="basedir" value="C:\Users\Shruthi\InfoObject\pageobject"/>
     <property name="java.endorsed.dirs" value="C:\jdk1.6\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="surefire.real.class.path" value="C:\Users\Shruthi\InfoObject\pageobject\target\surefire\surefirebooter8976509517645172860.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Shruthi\InfoObject\pageobject\target\surefire\surefirebooter2691434545077822678.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\Shruthi\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
