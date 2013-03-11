@@ -34,7 +34,7 @@ public class LoginPage extends Page {
 	
 	
 	public UserHomePage testLogin(){		
-		driver.get("http://173.200.182.212:9090/test.q1/");
+		driver.get("http://173.200.182.212:9090/test.q1a/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		/*
 		driver.findElement(By.xpath("//*[@id='img_login']")).click();
