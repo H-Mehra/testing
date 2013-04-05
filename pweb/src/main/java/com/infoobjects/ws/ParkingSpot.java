@@ -11,6 +11,11 @@ public class ParkingSpot {
 	public void setSpotNumber(int spotNumber) {
 		this.spotNumber = spotNumber;
 	}
+
+	public ParkingSpot(int spotNumber) {
+		super();
+		this.spotNumber = spotNumber;
+	}
 	
 	
 
