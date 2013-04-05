@@ -13,7 +13,7 @@ public class ParkingServiceClient {
 		URL url;
 		try {
 			url = new URL("http://127.0.0.1:9876/parking?wsdl");
-			QName qname = new QName("http://ws.infoobjects.com/","ParkingServiceImpl");
+			QName qname = new QName("http://ws.infoobjects.com/","ParkingServiceImplService");
 		Service service = Service.create(url,qname);
 		ParkingService eif = service.getPort(ParkingService.class);
 		System.out.println(eif.addParkingSpot());
