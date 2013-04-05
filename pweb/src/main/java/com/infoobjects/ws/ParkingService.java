@@ -1,21 +1,13 @@
 package com.infoobjects.ws;
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding;
 
+@SOAPBinding(style = Style.RPC)
 @WebService
-public class ParkingService {
-
-	public boolean addParkingSpot(int spotId) {
-
-		ParkingSpot spot = new ParkingSpot(spotId);
-
-		return true;
-
-	}
-
-	public ParkingSpot getParkingSpot(int spotId) {
-          return new ParkingSpot(spotId);
-	}
-
-	public void deleteSpot(int spotId) {
-
-	}
+public interface ParkingService {
+	@WebMethod
+	public String addParkingSpot() ;
+	
 }
