@@ -49,11 +49,18 @@ public class HomePageTest {
 	}
 
 	@Test
-	public void testLoginDiv() {
+	public void testSignUpSection() {
 
-		WebElement loginDiv = driver.findElement(By.id("1_fblogin"));
-
-		List<WebElement> divs = loginDiv.findElements(By.tagName("div"));
+		WebElement signUpSection = driver.findElement(By.id("1_fblogin"));
+		List<WebElement> divs = signUpSection.findElements(By.tagName("div"));
+		WebElement loginDiv = divs.get(2);
+		WebElement loginAnchor = loginDiv.findElement(By.tagName("a"));
+		assertEquals("http://www.q1a.com/q1a/User/SignUp",
+				loginAnchor.getAttribute("href"));
+		WebElement signUpImage = loginAnchor.findElement(By.tagName("img"));
+		assertEquals("http://www.q1a.com/q1a/Content/Images/signup.png",signUpImage.getAttribute("src"));
+		assertEquals("Sign Up Text is not displayed","SignUp",signUpImage.getAttribute("title"));
+		
 
 	}
 
