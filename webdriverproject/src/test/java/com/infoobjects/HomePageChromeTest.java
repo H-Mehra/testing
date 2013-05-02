@@ -1,0 +1,58 @@
+package com.infoobjects;
+
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class HomePageChromeTest {
+
+	private static WebDriver driver;
+
+	@BeforeClass
+	public static void init() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Documents and Settings\\Geetha\\My Documents\\Downloads\\chromedriver2_win32_0.8\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://www.q1a.com");
+
+	}
+
+	@Test
+	public void testTitle() {
+		assertEquals("TITLE IS NOT AS EXPECTED",
+				"Technical Assessment Platform", driver.getTitle());
+	}
+
+	@Test
+	public void testUrl() {
+		assertEquals("http://www.q1a.com/q1a", driver.getCurrentUrl());
+	}
+
+	@Test
+	public void testLogo() {
+		WebElement logo = driver.findElement(By.id("img_logo"));
+		assertNotNull(logo);
+		assertEquals("0", logo.getAttribute("border"));
+		assertEquals("Technical Assessment Platform",
+				logo.getAttribute("title"));
+		assertEquals("http://www.q1a.com/q1a/Content/Images/logo.png",
+				logo.getAttribute("src"));
+
+	}
+/*@Test
+public void testDeveloperButton(){
+	WebElement developerButton = driver
+}*/
+	@AfterClass
+	public static void cleanUp() {
+		driver.close();
+	}
+
+}
